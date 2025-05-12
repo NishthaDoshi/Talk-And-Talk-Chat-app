@@ -65,7 +65,7 @@ npm run build
 npm start
 ```
 
-## Database Schema
+## 🗂️ Database Schema
 
 ### User Model
 - `email`: String (unique)
@@ -83,5 +83,5 @@ npm start
 
 
 
-# Author
+# ✍️ Author
 Nishtha Doshi
