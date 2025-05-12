@@ -1,4 +1,6 @@
+import React, { useEffect } from 'react'
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
@@ -9,7 +11,6 @@ import ProfilePage from "./pages/ProfilePage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { useAuthStore } from "./store/useAuthStore";
 import { useThemeStore } from "./store/useThemeStore";
-import { useEffect } from "react";
 
 import { Loader } from "lucide-react";
 import { Toaster } from "react-hot-toast";
@@ -36,6 +37,7 @@ const App = () => {
   return (
     <div data-theme={theme}>
       <Navbar />
+      <main className="flex-grow">
 
       <Routes>
         <Route path="/" element={authUser ? <HomePage /> : <Navigate to="/login" />} />
@@ -44,8 +46,10 @@ const App = () => {
         <Route path="/settings" element={<SettingsPage />} />
         <Route path="/profile" element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
       </Routes>
-
-      <Toaster />
+       <Toaster />
+         </main>
+        {/* Adding the Footer component */}
+      <Footer />
     </div>
   );
 };
