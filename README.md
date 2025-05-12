@@ -81,3 +81,7 @@ npm start
 - `image`: String (URL)
 - `timestamps`: Created and updated times
 
+
+
+# Author
+Nishtha Doshi
